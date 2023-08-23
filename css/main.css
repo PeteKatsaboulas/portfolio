@@ -201,7 +201,7 @@ header nav a span:last-child {
 
 .container {
   position: relative;
-  width: min(360px, 100%);
+  width: min(380px, 100%);
   margin-inline: auto;
   padding-inline: 2rem;
 }
@@ -261,7 +261,7 @@ html {
 body {
   font-family: 'PP Mori';
   font-size: 1.4rem;
-  line-height: 1.35;
+  line-height: 1.5;
   letter-spacing: -0.015em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -367,6 +367,7 @@ svg.eyeball circle {
   }
 }
 .heart-svg {
+  width: 2.6rem;
   transition: all 0.6s var(--ease-in-out-quad);
   animation: spinHeart 3s infinite;
 }
@@ -392,8 +393,8 @@ svg.eyeball circle {
   position: relative;
 }
 .hero .headline {
-  padding-top: max(10vw, 12rem);
-  padding-bottom: 8rem;
+  padding-top: max(12vw, 16rem);
+  padding-bottom: 10rem;
 }
 .hero .cta {
   position: absolute;
@@ -407,8 +408,8 @@ svg.eyeball circle {
 }
 
 :root {
-  --large-slide:320px;
-  --small-slide: 220px;
+  --large-slide:340px;
+  --small-slide: 240px;
 }
 
 .work {
@@ -490,7 +491,6 @@ svg.eyeball circle {
 .project__slides .project__slide {
   position: relative;
   display: flex;
-  justify-content: center;
   flex-shrink: 0;
   aspect-ratio: 1 / 1;
 }
@@ -514,7 +514,7 @@ svg.eyeball circle {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  padding: 2rem;
+  padding: 3rem;
   background-color: var(--clr-primary);
 }
 .project__info .role {
@@ -527,8 +527,8 @@ svg.eyeball circle {
   gap: 0.8rem;
 }
 .project__info a svg {
-  margin-bottom: 0.1rem;
-  width: 1.9rem;
+  margin-bottom: -0.2rem;
+  width: 1.7rem;
   stroke: var(--clr-secondary);
 }
 

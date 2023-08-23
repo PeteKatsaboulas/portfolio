@@ -65,6 +65,7 @@ svg.eyeball{
 
 
 .heart-svg{
+    width:2.6rem;
     transition:all 0.6s var(--ease-in-out-quad);
     animation: spinHeart 3s infinite;
 }
