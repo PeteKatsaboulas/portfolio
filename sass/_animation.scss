@@ -68,6 +68,9 @@ svg.eyeball{
     width:2.6rem;
     transition:all 0.6s var(--ease-in-out-quad);
     animation: spinHeart 3s infinite;
+    @media(min-width:1280px){
+        width:4rem;
+    }
 }
 
 @keyframes spinHeart {

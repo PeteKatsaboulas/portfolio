@@ -364,6 +364,11 @@ svg.eyeball circle {
   transition: all 0.6s var(--ease-in-out-quad);
   animation: spinHeart 3s infinite;
 }
+@media (min-width: 1280px) {
+  .heart-svg {
+    width: 4rem;
+  }
+}
 
 @keyframes spinHeart {
   0% {
@@ -459,7 +464,12 @@ svg.eyeball circle {
   display: flex;
   flex-wrap: nowrap;
   flex-shrink: 0;
-  transition: all 1.2s var(--ease-out);
+  transition: all 0.6s var(--ease-out);
+}
+@media (min-width: 600px) {
+  .project__slides {
+    transition: all 1.2s var(--ease-out);
+  }
 }
 .project__slides .project__slide {
   position: relative;
