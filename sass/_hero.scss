@@ -1,0 +1,17 @@
+.hero{
+    position:relative;
+    .headline{
+        padding-top:max(10vw, 12rem);
+        padding-bottom:8rem;
+    }
+    .cta{
+        position:absolute;
+        display:flex;
+        align-items: center;
+        gap:0.5rem;
+        bottom:1rem;
+        left:50%;
+        font-size:1rem;
+        color:var(--clr-secondary);
+    }
+}

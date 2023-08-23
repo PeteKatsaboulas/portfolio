@@ -1,0 +1,81 @@
+/* –––––––––––––––––––––––––––––––––––––––––––
+
+TYPE
+
+––––––––––––––––––––––––––––––––––––––––––– */
+@font-face {
+  font-family: 'PP Mori';
+  src: url('../fonts/ppmori-regular-webfont.woff2') format('woff2'),
+       url('../fonts/ppmori-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PP Mori italic';
+  src: url('../fonts/ppmori-regularitalic-webfont.woff2') format('woff2'),
+       url('../fonts/ppmori-regularitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PP Mori semi-bold';
+  src: url('../fonts/ppmori-semibold-webfont.woff2') format('woff2'),
+       url('../fonts/ppmori-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PP Mori semi-bold-italic';
+  src: url('../fonts/ppmori-semibolditalic-webfont.woff2') format('woff2'),
+       url('../fonts/ppmori-semibolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html{
+  font-size:62.5%;
+}
+body{
+  font-family: 'PP Mori';
+  font-size:1.5rem;
+  line-height:1.35;
+  letter-spacing:-0.015em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+}
+h2{
+  font-size:3rem;
+  line-height:1.2;
+  letter-spacing:-0.035em;
+  line-height:1.1;
+}
+
+h1{
+  font-size:4.4rem;
+  letter-spacing:-0.035em;
+  line-height:1.1;
+}
+
+.fs--1{
+  font-size:2.4rem;
+}
+
+.ff--mono{
+  font-family: 'JetBrains mono', serif;
+  font-weight:500;
+  font-size:1.2rem;
+  text-transform: uppercase;
+  margin-top:0.2em;
+}
+
+.fw--regular{
+  font-family: 'PP Mori';
+}
+.fw--semi-bold{
+  font-family: 'PP Mori semi-bold';
+}
+
+.highlight{
+    color:var(--clr-highlight); 
+}
+

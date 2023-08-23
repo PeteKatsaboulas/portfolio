@@ -1,0 +1,88 @@
+svg.eyeball{
+    width:1.8rem;
+    transition:all 0.6s var(--ease-out);
+    path{
+        transform-origin: 50% 50%;
+        animation: blink 3s infinite;
+        overflow:hidden;
+    }
+    circle{
+        animation: look 10s infinite;
+    }
+}
+
+@keyframes blink {
+    0%{
+        transform: scaleY(1);
+    }
+    2%{
+        transform: scaleY(0.1);
+    }
+    6%{
+        transform: scaleY(1);
+
+    }
+    94%{
+        transform: scaleY(1);
+    }
+    95%{
+        transform: scaleY(1);
+    }
+    0%{
+        transform: scaleY(0.1);
+    } 
+}
+
+@keyframes look {
+    0%{
+        transform: translateX(0);
+    }
+    5%{
+        transform: translateX(0);
+    }
+    15%{
+        transform: translateX(3px);
+    }
+    20%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-3px);
+    }
+    60%{
+        transform: translateX(0);
+    }
+    70%{
+        transform: translateX(0);
+    }
+    80%{
+        transform: translateX(-3px);
+    }
+    100%{
+        transform: translateX(0);
+    } 
+}
+
+
+.heart-svg{
+    transition:all 0.6s var(--ease-in-out-quad);
+    animation: spinHeart 3s infinite;
+}
+
+@keyframes spinHeart {
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
