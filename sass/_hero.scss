@@ -3,6 +3,7 @@
     .headline{
         padding-top:max(12vw, 16rem);
         padding-bottom:10rem;
+        padding-inline:2rem;
     }
     .cta{
         position:absolute;
@@ -10,8 +11,34 @@
         align-items: center;
         gap:0.5rem;
         bottom:1rem;
-        left:50%;
+        right:5rem;
         font-size:1rem;
         color:var(--clr-secondary);
+        &:after{
+            content:"Swipe left...enjoy";
+        }
+    }
+}
+
+@media(min-width:960px) {
+    .hero{
+        .headline{
+            padding-left:3rem;
+        }
+        .cta{
+            right:auto;
+            left:50%;
+            font-size:1.1rem;
+            &:after{
+                content:"Drag projects...enjoy";
+            }
+        }
+    }
+}
+@media(min-width:1280px) {
+    .hero{
+        .headline{
+            padding-left:6rem;
+        }
     }
 }

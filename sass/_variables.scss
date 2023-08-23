@@ -1,38 +1,34 @@
-$easeOutExpo:cubic-bezier(0.19, 1, 0.22, 1); /* easeOutExpo */
-$easeInOutExpo:cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */
-
+// ———————————————————————–––––––––––––––––––––––––––––––––––
+// Variables
+// ———————————————————————–––––––––––––––––––––––––––––––––––
 :root{
     --clr-primary:#111;
-    --clr-white:#f3f2f0; //f3f2f0
+    --clr-white:#f3f2f0; 
     --clr-secondary:#828282;
-    --clr-gray-light:#e4e0d6;
-    --clr-gray-mid:#dcd8d0;
-    --clr-blue-light:#a0e3f1;
-    --clr-orange:#f84c26;
     --clr-highlight:#f84c26;
-    --clr-border:#727272; //c2c1bb
+    --clr-border:#727272; 
+
+    --large-slide:320px; //       450    /     610
+    --small-slide: 220px;//       290   /     450
 
     --ease-out:cubic-bezier(0.19, 1, 0.22, 1);
     --ease-in:cubic-bezier(0.950, 0.050, 0.795, 0.035);
     --ease-in-out:cubic-bezier(1.000, 0.000, 0.000, 1.000);
 
-    --ease-in-quad: cubic-bezier(.55, .085, .68, .53);
-    --ease-in-cubic: cubic-bezier(.55, .055, .675, .19);
-    --ease-in-quart: cubic-bezier(.895, .03, .685, .22);
-    --ease-in-quint: cubic-bezier(.755, .05, .855, .06);
-    --ease-in-expo: cubic-bezier(.95, .05, .795, .035);
-    --ease-in-circ: cubic-bezier(.6, .04, .98, .335);
-    --ease-out-quad: cubic-bezier(.25, .46, .45, .94);
-    --ease-out-cubic: cubic-bezier(.215, .61, .355, 1);
-    --ease-out-quart: cubic-bezier(.165, .84, .44, 1);
-    --ease-out-quint: cubic-bezier(.23, 1, .32, 1);
-    --ease-out-expo: cubic-bezier(.19, 1, .22, 1);
-    --ease-out-circ: cubic-bezier(.075, .82, .165, 1);
-    --ease-in-out-quad: cubic-bezier(.455, .03, .515, .955);
-    --ease-in-out-cubic: cubic-bezier(.645, .045, .355, 1);
-    --ease-in-out-quart: cubic-bezier(.77, 0, .175, 1);
-    --ease-in-out-quint: cubic-bezier(.86, 0, .07, 1);
-    --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
-    --ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
+    @media(min-width:960px){
+        --large-slide:370px; //       450    /     610
+        --small-slide: 220px;//       290   /     450
+    }
+
+    @media(min-width:1280px){
+        --large-slide:450px; //       450    /     610
+        --small-slide: 290px;//       290   /     450
+    }
+
+    @media(min-width:1600px){
+        --large-slide:610px; //       450    /     610
+        --small-slide: 450px;//       290   /     450
+    }
 }
+
 

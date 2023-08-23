@@ -1,33 +1,10 @@
-/* –––––––––––––––––––––––––––––––––––––––––––
-
-TYPE
-
-––––––––––––––––––––––––––––––––––––––––––– */
+// ———————————————————————–––––––––––––––––––––––––––––––––––
+// Type
+// ———————————————————————–––––––––––––––––––––––––––––––––––
 @font-face {
   font-family: 'PP Mori';
   src: url('../fonts/ppmori-regular-webfont.woff2') format('woff2'),
        url('../fonts/ppmori-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'PP Mori italic';
-  src: url('../fonts/ppmori-regularitalic-webfont.woff2') format('woff2'),
-       url('../fonts/ppmori-regularitalic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'PP Mori semi-bold';
-  src: url('../fonts/ppmori-semibold-webfont.woff2') format('woff2'),
-       url('../fonts/ppmori-semibold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'PP Mori semi-bold-italic';
-  src: url('../fonts/ppmori-semibolditalic-webfont.woff2') format('woff2'),
-       url('../fonts/ppmori-semibolditalic-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -37,30 +14,22 @@ html{
 }
 body{
   font-family: 'PP Mori';
-  //font-size:1.5rem;
   font-size:1.4rem;
   line-height:1.5;
   letter-spacing:-0.015em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
 }
+h1{
+  font-size:2.8rem;
+  letter-spacing:-0.035em;
+  line-height:1.2;
+}
 h2{
-  //font-size:3rem;
-  font-size:2rem;
+  font-size:2.2rem;
   line-height:1.2;
   letter-spacing:-0.035em;
-  line-height:1.1;
-}
-
-h1{
-  //font-size:4.4rem;
-  font-size:3.2rem;
-  letter-spacing:-0.035em;
-  line-height:1.1;
-}
-
-.fs--1{
-  font-size:2.4rem;
+  line-height:1.2;
 }
 
 .ff--mono{
@@ -71,14 +40,29 @@ h1{
   margin-top:0.2em;
 }
 
-.fw--regular{
-  font-family: 'PP Mori';
-}
-.fw--semi-bold{
-  font-family: 'PP Mori semi-bold';
+.highlight{
+  color:var(--clr-highlight); 
 }
 
-.highlight{
-    color:var(--clr-highlight); 
+@media(min-width:960px){
+  h1{
+    font-size:3.2rem;
+  }
+  h2{
+    font-size:2.4rem;
+  }
 }
+
+@media(min-width:1280px){
+  body{
+    font-size:1.5rem;
+  }
+  h1{
+    font-size:4.4rem;
+  }
+  h2{
+    font-size:3rem;
+  }
+}
+
 

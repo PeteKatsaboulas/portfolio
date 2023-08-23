@@ -1,10 +1,6 @@
-// ———————————————————————
-// Project slider
-// ———————————————————————
-:root{
-    --large-slide:340px; //       450    /     610
-    --small-slide: 240px;//       290   /     450
-}
+// ———————————————————————–––––––––––––––––––––––––––––––––––
+// Work
+// ———————————————————————–––––––––––––––––––––––––––––––––––
 .work{
     z-index:4;
     position:relative;
@@ -19,6 +15,63 @@
         }
     }
 }
+// ———————————————————————–––––––––––––––––––––––––––––––––––
+// Slides
+// ———————————————————————–––––––––––––––––––––––––––––––––––
+.project__slides{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink:0;
+    transition:all 1.2s var(--ease-out);
+    .project__slide{
+        position:relative;
+        display:flex;
+        flex-shrink:0;
+        aspect-ratio: 1 / 1;
+        img, video, .text__slide-inner{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            transform:scale(0.85); 
+            backface-visibility: hidden; 
+        }
+        &:first-child{
+            transform:scale(1); 
+        }
+    }
+}
+// ———————————————————————–––––––––––––––––––––––––––––––––––
+// Info
+// ———————————————————————–––––––––––––––––––––––––––––––––––
+.project__info{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height:100%;
+    padding:2rem;
+    background-color:var(--clr-primary);
+    .role{
+        margin-top:0.5rem;
+        color:var(--clr-secondary);
+    }
+    a{
+        display:inline-flex;
+        align-items: end;
+        gap:0.8rem;
+        svg{
+            margin-bottom:0rem;
+            width:1.7rem;
+            stroke:var(--clr-secondary);
+        }
+    }
+}
+// ———————————————————————–––––––––––––––––––––––––––––––––––
+// Square
+// ———————————————————————–––––––––––––––––––––––––––––––––––
 .project__square{
     z-index:2;
     position:absolute;
@@ -42,7 +95,9 @@
         }
     }
 }
-
+// ———————————————————————–––––––––––––––––––––––––––––––––––
+// Blur
+// ———————————————————————–––––––––––––––––––––––––––––––––––
 .project__blur{
     z-index:0;
     position:absolute;
@@ -54,7 +109,6 @@
         width: var(--small-slide);
         height:var(--small-slide);
         margin-inline:auto;
-       //padding-left:12rem;
     }
     .project__slides{
         pointer-events: none;
@@ -72,62 +126,47 @@
     .project__info{
         padding:0rem;
         h2{
-            //font-size:2.4rem;
             font-size:1.8rem;
         }
     }
 }
 
-.project__slides{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-shrink:0;
-    transition:all 1.2s var(--ease-out);
-    .project__slide{
-        position:relative;
-        display:flex;
-        //justify-content: center;
-        flex-shrink:0;
-        aspect-ratio: 1 / 1;
-        img, video, .text__slide-inner{
-            position:absolute;
-            top:0;
-            left:0;
-            width:100%;
-            height:100%;
-            object-fit: cover;
-            transform:scale(0.85); 
-            backface-visibility: hidden; 
+@media(min-width:960px){
+    .project__info{
+        padding:3rem;
+    }
+    .project__blur{
+        .project__slider{
+           padding-left:12rem;
         }
-        &:first-child{
-            transform:scale(1); 
+        .project__slides{
+            opacity:0.5;
+        }
+        .project__info{
+            h2{
+                font-size:2.4rem;
+            }
         }
     }
 }
-.project__info{
-    position:relative;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    height:100%;
-    //padding:3rem;
-    padding:3rem;
-    background-color:var(--clr-primary);
-    .role{
-        margin-top:0.5rem;
-        color:var(--clr-secondary);
-    }
-    a{
-        display:inline-flex;
-        align-items: end;
-        gap:0.8rem;
-        svg{
-            margin-bottom:-0.2rem;
-            width:1.7rem;
-            stroke:var(--clr-secondary);
+
+@media(min-width:1280px){
+    .project__info{
+        padding:6rem;
+        a{
+            svg{
+                margin-bottom:0.3rem;
+                width:2rem;
+            }
         }
     }
+    
 }
+
+@media(min-width:1600px){
+   
+}
+
 
 
 
