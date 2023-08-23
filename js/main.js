@@ -74,6 +74,15 @@ gsap.to(".hero", {
 });
 
 
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+      document.querySelector("#load-stuff").style.visibility = "visible";
+  } else {
+    window.scrollTo(0, 0);
+    document.querySelector("#load-stuff").style.display = "none";
+    gsap.to([".headline", ".cta", ".work"], {y: 0, opacity:1, duration:0, stagger: 0.1});
+  }
+};
 
 
     

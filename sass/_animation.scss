@@ -1,3 +1,12 @@
+.headline, .cta, .work{
+    opacity:0;
+    transform:translateY(10rem);
+    will-change: transform;
+    transition:transform 1.2s var(--ease-out), opacity 1.2s var(--ease-out);
+}
+
+
+
 svg.eyeball{
     width:1.8rem;
     transition:all 0.6s var(--ease-out);

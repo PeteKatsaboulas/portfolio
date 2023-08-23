@@ -111,6 +111,20 @@ body {
   color: var(--clr-secondary);
 }
 
+#load-stuff {
+  z-index: 20;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-primary);
+  font-size: 2rem;
+}
+
 .container {
   position: relative;
   width: min(380px, 100%);
@@ -127,7 +141,7 @@ body {
 .flex--col-2 {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-basis: 100%;
   padding-left: 2rem;
 }
@@ -145,10 +159,10 @@ body {
   .flex--col-2 {
     flex-basis: 50%;
     padding-left: 3rem;
-    gap: 1.2rem;
+    gap: 1rem;
   }
   .flex--col-2:last-child {
-    margin-top: 0.2rem;
+    margin-top: 0.3rem;
     padding-left: 0;
   }
 }
@@ -158,14 +172,14 @@ body {
   }
 
   .flex--col-2 {
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
   .flex--col-2:first-child {
     padding-left: 6rem;
   }
   .flex--col-2:last-child {
     max-width: 24rem;
-    margin-top: 0.3rem;
+    margin-top: 0.4rem;
   }
 }
 @media (min-width: 1600px) {
@@ -244,7 +258,7 @@ html {
 body {
   font-family: 'PP Mori';
   font-size: 1.4rem;
-  line-height: 1.5;
+  line-height: 1.4;
   letter-spacing: -0.015em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -253,14 +267,13 @@ body {
 h1 {
   font-size: 2.8rem;
   letter-spacing: -0.035em;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 h2 {
   font-size: 2.2rem;
-  line-height: 1.2;
   letter-spacing: -0.035em;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .ff--mono {
@@ -297,6 +310,13 @@ h2 {
     font-size: 3rem;
   }
 }
+.headline, .cta, .work {
+  opacity: 0;
+  transform: translateY(10rem);
+  will-change: transform;
+  transition: transform 1.2s var(--ease-out), opacity 1.2s var(--ease-out);
+}
+
 svg.eyeball {
   width: 1.8rem;
   transition: all 0.6s var(--ease-out);
@@ -510,8 +530,8 @@ svg.eyeball circle {
   gap: 0.8rem;
 }
 .project__info a svg {
-  margin-bottom: 0rem;
-  width: 1.7rem;
+  margin-bottom: -0.2rem;
+  width: 1.6rem;
   stroke: var(--clr-secondary);
 }
 
@@ -574,6 +594,10 @@ svg.eyeball circle {
   .project__info {
     padding: 3rem;
   }
+  .project__info a svg {
+    margin-bottom: -0.1rem;
+    width: 1.7rem;
+  }
 
   .project__blur .project__slider {
     padding-left: 12rem;
@@ -590,7 +614,7 @@ svg.eyeball circle {
     padding: 6rem;
   }
   .project__info a svg {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.1rem;
     width: 2rem;
   }
 }
