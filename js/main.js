@@ -10,22 +10,33 @@ var content    = document.getElementById("work ");
 
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
-      var img_length = document.images.length ;
-      img.src = img.dataset.loadsrc ||img.getAttribute("src");
-      setTimeout (function(){ 
-          loader.style.display = "block";
-          loader_num.textContent = Math.ceil((num)/(img_length)*100);
-          num ++;
-          if(num < img_length){
-            imgLoad(document.images[num]);	
-          }
-      },100)
+      loader.style.visibility = "visible";
+      imgLoad(document.images[num]);
   } else {
     window.scrollTo(0, 0);
     loader.style.display = "none";
     gsap.to([".headline", ".cta", ".work"], {y: 0, opacity:1, duration:0, stagger: 0.1});
   }
 };
+
+
+function imgLoad(img) {
+	var img_length = document.images.length ;
+	img.src = img.dataset.loadsrc ||img.getAttribute("src");
+
+  setTimeout (function(){ 
+      loader_num.style.display = "block";
+      loader_num.textContent = Math.ceil((num)/(img_length)*100);
+      num ++;
+      if(num < img_length){
+        imgLoad(document.images[num]);	
+      }
+	},100)
+}
+
+
+
+
 
 
 

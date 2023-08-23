@@ -309,15 +309,13 @@ h2 {
   width: 100%;
   height: 100%;
   background-color: var(--clr-primary);
-  font-size: 2rem;
 }
 #load-stuff #load-num {
   display: none;
   font-family: "PP Mori", sans-serif;
   letter-spacing: -0.05em;
-  font-size: 80vw;
-  color: var(--clr-border);
-  opacity: 0.3;
+  font-size: 5rem;
+  color: var(--clr-secondary);
 }
 
 svg.eyeball {
