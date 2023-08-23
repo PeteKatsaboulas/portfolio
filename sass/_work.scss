@@ -2,8 +2,8 @@
 // Project slider
 // ———————————————————————
 :root{
-    --large-slide:610px;
-    --small-slide: 450px;
+    --large-slide:320px; //       450    /     610
+    --small-slide: 220px;//       290   /     450
 }
 .work{
     z-index:4;
@@ -54,11 +54,11 @@
         width: var(--small-slide);
         height:var(--small-slide);
         margin-inline:auto;
-        padding-left:12rem;
+       //padding-left:12rem;
     }
     .project__slides{
         pointer-events: none;
-        opacity:0.4;
+        opacity:0.8;
         .project__slide{
             height: var(--small-slide);
             img, video{
@@ -72,7 +72,8 @@
     .project__info{
         padding:0rem;
         h2{
-            font-size:2.4rem;
+            //font-size:2.4rem;
+            font-size:1.8rem;
         }
     }
 }
@@ -109,7 +110,8 @@
     flex-direction: column;
     justify-content: center;
     height:100%;
-    padding:3rem;
+    //padding:3rem;
+    padding:2rem;
     background-color:var(--clr-primary);
     .role{
         margin-top:0.5rem;
