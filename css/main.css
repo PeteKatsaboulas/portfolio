@@ -74,7 +74,7 @@ meter {
 :root {
   --clr-primary:#111;
   --clr-white:#f3f2f0;
-  --clr-secondary:#828282;
+  --clr-secondary:#949292;
   --clr-highlight:#f84c26;
   --clr-border:#727272;
   --large-slide:320px;
@@ -109,20 +109,6 @@ body {
 
 .clr--secondary {
   color: var(--clr-secondary);
-}
-
-#load-stuff {
-  z-index: 20;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--clr-primary);
-  font-size: 2rem;
 }
 
 .container {
@@ -258,7 +244,7 @@ html {
 body {
   font-family: 'PP Mori';
   font-size: 1.4rem;
-  line-height: 1.4;
+  line-height: 1.5;
   letter-spacing: -0.015em;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -297,10 +283,6 @@ h2 {
   }
 }
 @media (min-width: 1280px) {
-  body {
-    font-size: 1.5rem;
-  }
-
   h1 {
     font-size: 4.4rem;
   }
@@ -314,6 +296,28 @@ h2 {
   transform: translateY(10rem);
   will-change: transform;
   transition: transform 1.2s var(--ease-out), opacity 1.2s var(--ease-out);
+}
+
+#load-stuff {
+  z-index: 20;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-primary);
+  font-size: 2rem;
+}
+#load-stuff #load-num {
+  display: none;
+  font-family: "PP Mori", sans-serif;
+  letter-spacing: -0.05em;
+  font-size: 80vw;
+  color: var(--clr-border);
+  opacity: 0.3;
 }
 
 svg.eyeball {
@@ -439,7 +443,7 @@ svg.eyeball circle {
   gap: 0.5rem;
   bottom: 1rem;
   right: 5rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--clr-secondary);
 }
 .hero .cta:after {
@@ -453,7 +457,6 @@ svg.eyeball circle {
   .hero .cta {
     right: auto;
     left: 50%;
-    font-size: 1.1rem;
   }
   .hero .cta:after {
     content: "Drag projects...enjoy";

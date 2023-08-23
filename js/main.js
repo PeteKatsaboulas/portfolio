@@ -2,6 +2,33 @@
 gsap.registerPlugin(Draggable)
 gsap.registerPlugin(ScrollTrigger)
 
+// Loader
+var num        = 0;
+var loader     = document.getElementById("load-stuff")
+var loader_num = document.getElementById("load-num");
+var content    = document.getElementById("work ");
+
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+      var img_length = document.images.length ;
+      img.src = img.dataset.loadsrc ||img.getAttribute("src");
+      setTimeout (function(){ 
+          loader.style.display = "block";
+          loader_num.textContent = Math.ceil((num)/(img_length)*100);
+          num ++;
+          if(num < img_length){
+            imgLoad(document.images[num]);	
+          }
+      },100)
+  } else {
+    window.scrollTo(0, 0);
+    loader.style.display = "none";
+    gsap.to([".headline", ".cta", ".work"], {y: 0, opacity:1, duration:0, stagger: 0.1});
+  }
+};
+
+
+
 // Lenis smooth scroll
 const lenis = new Lenis()
 
@@ -55,7 +82,15 @@ projects.forEach( (project) => {
 
 })
 
-
+if(window.innerWidth > 600) {
+  gsap.to(".hero", {
+    yPercent: 100,
+    ease: "none",
+    scrollTrigger: {
+      scrub: true
+    }, 
+  });
+}
 
 window.onresize = () => {
   largeSlide  = parseInt(styles.getPropertyValue('--large-slide'), 10) 
@@ -65,24 +100,8 @@ window.onresize = () => {
 }
 
 
-gsap.to(".hero", {
-  yPercent: 100,
-  ease: "none",
-  scrollTrigger: {
-    scrub: true
-  }, 
-});
 
 
-document.onreadystatechange = function () {
-  if (document.readyState !== "complete") {
-      document.querySelector("#load-stuff").style.visibility = "visible";
-  } else {
-    window.scrollTo(0, 0);
-    document.querySelector("#load-stuff").style.display = "none";
-    gsap.to([".headline", ".cta", ".work"], {y: 0, opacity:1, duration:0, stagger: 0.1});
-  }
-};
 
 
     
