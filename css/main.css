@@ -129,7 +129,7 @@ body {
   flex-direction: column;
   gap: 1rem;
   flex-basis: 100%;
-  padding-left: 2rem;
+  padding-left: 0;
 }
 
 @media (min-width: 960px) {
@@ -251,7 +251,7 @@ body {
 }
 
 h1 {
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   letter-spacing: -0.035em;
   line-height: 1.1;
 }
@@ -276,7 +276,7 @@ h2 {
 
 @media (min-width: 960px) {
   h1 {
-    font-size: 3.2rem;
+    font-size: 3.6rem;
   }
 
   h2 {
@@ -434,7 +434,7 @@ svg.eyeball circle {
 .hero .headline {
   padding-top: max(12vw, 16rem);
   padding-bottom: 10rem;
-  padding-inline: 2rem;
+  padding-inline: 0;
 }
 .hero .cta {
   position: absolute;
@@ -615,12 +615,13 @@ svg.eyeball circle {
   .project__info {
     padding: 6rem;
   }
-  .project__info h2 {
-    font-size: 2.4rem;
-  }
   .project__info a svg {
     margin-bottom: 0.1rem;
     width: 2rem;
+  }
+
+  .project__blur .project__info h2 {
+    font-size: 2.4rem;
   }
 }
 
