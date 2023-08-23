@@ -45,13 +45,13 @@
       width:min(960px, 100%);
    }
    .flex--col-2{
-      gap:1.2rem;
+      gap:1.5rem;
       &:first-child{
          padding-left:6rem;
       } 
       &:last-child{
          max-width:24rem;
-         margin-top:0.4rem;
+         margin-top:0.5rem;
        }
    }
 }

@@ -158,14 +158,14 @@ body {
   }
 
   .flex--col-2 {
-    gap: 1.2rem;
+    gap: 1.5rem;
   }
   .flex--col-2:first-child {
     padding-left: 6rem;
   }
   .flex--col-2:last-child {
     max-width: 24rem;
-    margin-top: 0.4rem;
+    margin-top: 0.5rem;
   }
 }
 @media (min-width: 1600px) {
@@ -244,8 +244,9 @@ html {
 body {
   font-family: 'PP Mori';
   font-size: 1.4rem;
-  line-height: 1.5;
+  line-height: 1.4;
   letter-spacing: -0.015em;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -319,7 +320,8 @@ h2 {
 }
 
 svg.eyeball {
-  width: 1.8rem;
+  width: 2rem;
+  margin-top: -0.1rem;
   transition: all 0.6s var(--ease-out);
 }
 svg.eyeball path {
@@ -606,12 +608,15 @@ svg.eyeball circle {
     opacity: 0.5;
   }
   .project__blur .project__info h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 1280px) {
   .project__info {
     padding: 6rem;
+  }
+  .project__info h2 {
+    font-size: 2.4rem;
   }
   .project__info a svg {
     margin-bottom: 0.1rem;
