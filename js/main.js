@@ -1,5 +1,6 @@
 // Register 
-gsap.registerPlugin(Draggable);
+gsap.registerPlugin(Draggable)
+gsap.registerPlugin(ScrollTrigger)
 
 // Lenis smooth scroll
 const lenis = new Lenis()
@@ -59,9 +60,19 @@ projects.forEach( (project) => {
 window.onresize = () => {
   largeSlide  = parseInt(styles.getPropertyValue('--large-slide'), 10) 
   smallSlide  = parseInt(styles.getPropertyValue('--small-slide'), 10)
-  
+
   gsap.to(".project__slides", {x: 0, duration: 0});
 }
+
+
+gsap.to(".hero", {
+  yPercent: 100,
+  ease: "none",
+  scrollTrigger: {
+    scrub: true
+  }, 
+});
+
 
 
 
