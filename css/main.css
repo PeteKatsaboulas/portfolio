@@ -72,8 +72,8 @@ meter {
 }
 
 :root {
-  --large-slide:320px;
-  --small-slide: 220px;
+  --large-slide:340px;
+  --small-slide: 240px;
   --border-width:2px;
   --ease-out:cubic-bezier(0.19, 1, 0.22, 1);
   --ease-in:cubic-bezier(0.950, 0.050, 0.795, 0.035);
@@ -99,7 +99,7 @@ meter {
 }
 
 [data-theme="light"] {
-  --clr-dark:#111;
+  --clr-dark:#181818;
   --clr-light:#fff;
   --clr-secondary:#888;
   --clr-highlight:#f84c26;
@@ -108,8 +108,8 @@ meter {
 
 [data-theme="dark"] {
   --clr-dark:#fff;
-  --clr-light:#111;
-  --clr-secondary:#888;
+  --clr-light:#181818;
+  --clr-secondary:#999;
   --clr-highlight:#f84c26;
   --clr-border:#727272;
 }
@@ -169,7 +169,7 @@ body, .work, .project__square {
   position: relative;
   width: min(380px, 100%);
   margin-inline: auto;
-  padding-inline: 3rem;
+  padding-inline: 2rem;
 }
 
 .flex {
@@ -190,36 +190,10 @@ body, .work, .project__square {
   .container {
     width: min(800px, 100%);
   }
-
-  .flex {
-    flex-direction: row;
-    gap: 0;
-  }
-
-  .flex--col-2 {
-    flex-basis: 50%;
-    padding-left: 3rem;
-    gap: 1rem;
-  }
-  .flex--col-2:last-child {
-    margin-top: 0.3rem;
-    padding-left: 0;
-  }
 }
 @media (min-width: 1280px) {
   .container {
     width: min(960px, 100%);
-  }
-
-  .flex--col-2 {
-    gap: 1.5rem;
-  }
-  .flex--col-2:first-child {
-    padding-left: 6rem;
-  }
-  .flex--col-2:last-child {
-    max-width: 24rem;
-    margin-top: 0.5rem;
   }
 }
 @media (min-width: 1600px) {
@@ -233,6 +207,27 @@ body, .work, .project__square {
   display: flex;
   align-items: center;
   height: calc(100vh - 10rem);
+}
+.info .flex--col-2:last-child {
+  max-width: 32rem;
+}
+@media (min-width: 960px) {
+  .info .flex--col-2 {
+    padding-left: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .info .flex--col-2 {
+    padding-left: 4rem;
+  }
+  .info .flex--col-2:last-child {
+    max-width: 48rem;
+  }
+}
+@media (min-width: 1600px) {
+  .info .flex--col-2 {
+    padding-left: 6rem;
+  }
 }
 .info h1 img {
   vertical-align: middle;
@@ -299,6 +294,7 @@ html {
 
 body {
   font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
   font-size: 1.5rem;
   line-height: 1.3;
   -webkit-font-smoothing: antialiased;
@@ -318,11 +314,11 @@ h2 {
 }
 
 .fs--1 {
-  font-size: 3.2rem;
+  font-size: 3.6rem;
 }
 
 .fs--2 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
 }
 
 .ff--mono {
@@ -347,11 +343,11 @@ h2 {
 
 @media (min-width: 960px) {
   .fs--1 {
-    font-size: 3.6rem;
+    font-size: 4rem;
   }
 
   .fs--2 {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
   }
 }
 @media (min-width: 1280px) {
@@ -536,6 +532,11 @@ svg.eyeball circle {
 }
 @media (min-width: 1280px) {
   .hero .headline {
+    padding-left: 4rem;
+  }
+}
+@media (min-width: 1600px) {
+  .hero .headline {
     padding-left: 6rem;
   }
 }
@@ -679,7 +680,7 @@ svg.eyeball circle {
 }
 @media (min-width: 1280px) {
   .project__info {
-    padding: 6rem;
+    padding: 4rem;
   }
   .project__info a svg {
     margin-bottom: 0.1rem;
@@ -688,6 +689,11 @@ svg.eyeball circle {
 
   .project__blur .project__info h2 {
     font-size: 2.4rem;
+  }
+}
+@media (min-width: 1600px) {
+  .project__info {
+    padding: 6rem;
   }
 }
 

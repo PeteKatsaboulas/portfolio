@@ -14,6 +14,7 @@ html{
 }
 body{
   font-family: 'DM Sans', sans-serif;
+  font-weight:500;
   font-size:1.5rem;
   line-height:1.3;
   -webkit-font-smoothing: antialiased;
@@ -31,10 +32,10 @@ h2{
 }
 
 .fs--1{
-  font-size:3.2rem;
+  font-size:3.6rem;
 }
 .fs--2{
-  font-size:2.2rem;
+  font-size:2.4rem;
 }
 
 .ff--mono{
@@ -58,10 +59,10 @@ h2{
 
 @media(min-width:960px){
   .fs--1{
-    font-size:3.6rem;
+    font-size:4rem;
   }
   .fs--2{
-    font-size:2.4rem;
+    font-size:2.8rem;
   }
 }
 

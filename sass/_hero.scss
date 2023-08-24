@@ -37,6 +37,13 @@
 @media(min-width:1280px) {
     .hero{
         .headline{
+            padding-left:4rem;
+        }
+    }
+}
+@media(min-width:1600px) {
+    .hero{
+        .headline{
             padding-left:6rem;
         }
     }

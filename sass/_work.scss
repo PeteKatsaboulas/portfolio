@@ -155,7 +155,7 @@
 
 @media(min-width:1280px){
     .project__info{
-        padding:6rem;
+        padding:4rem;
         a{
             svg{
                 margin-bottom:0.1rem;
@@ -173,7 +173,9 @@
 }
 
 @media(min-width:1600px){
-   
+    .project__info{
+        padding:6rem;
+    }
 }
 
 
