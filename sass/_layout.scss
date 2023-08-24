@@ -81,6 +81,7 @@
    height:10rem;
    background-color:var(--clr-primary);
    border-top:var(--border-width) solid var(--clr-border);
+   border-bottom:var(--border-width) solid var(--clr-border);
    &:after{
       content:"";
       display:block;
