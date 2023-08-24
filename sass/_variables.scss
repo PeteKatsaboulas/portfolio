@@ -2,32 +2,26 @@
 // Variables
 // ———————————————————————–––––––––––––––––––––––––––––––––––
 :root{
-    --clr-primary:#111;
-    --clr-white:#f3f2f0; 
-    --clr-secondary:#949292;
-    --clr-highlight:#f84c26;
-    --clr-border:#727272; 
+    --large-slide:320px; 
+    --small-slide: 220px;
 
-    --large-slide:320px; //       450    /     610
-    --small-slide: 220px;//       290   /     450
+    --border-width:2px;
 
     --ease-out:cubic-bezier(0.19, 1, 0.22, 1);
     --ease-in:cubic-bezier(0.950, 0.050, 0.795, 0.035);
     --ease-in-out:cubic-bezier(1.000, 0.000, 0.000, 1.000);
 
     @media(min-width:960px){
-        --large-slide:370px; //       450    /     610
-        --small-slide: 220px;//       290   /     450
+        --large-slide:370px; 
+        --small-slide: 220px;
     }
-
     @media(min-width:1280px){
-        --large-slide:450px; //       450    /     610
-        --small-slide: 290px;//       290   /     450
+        --large-slide:450px; 
+        --small-slide: 290px;
     }
-
     @media(min-width:1600px){
-        --large-slide:610px; //       450    /     610
-        --small-slide: 450px;//       290   /     450
+        --large-slide:610px; 
+        --small-slide: 450px;
     }
 }
 

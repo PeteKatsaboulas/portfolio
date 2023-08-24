@@ -1,9 +1,65 @@
-
-body{
-    background-color:var(--clr-primary);
-    color:var(--clr-white);
+[data-theme="light"]{
+    --clr-dark:#111;
+    --clr-light:#fff; 
+    --clr-secondary:#888;
+    --clr-highlight:#f84c26;
+    --clr-border:#111;
+}
+[data-theme="dark"]{
+    --clr-dark:#fff;
+    --clr-light:#111; 
+    --clr-secondary:#888;
+    --clr-highlight:#f84c26;
+    --clr-border:#727272;
+}
+body, .work, .project__square{
+    background-color:var(--clr-light);
+    color:var(--clr-dark);
+    transition:background-color 0.8s var(--ease-out), color 0.8s var(--ease-out);
 }
 
 .clr--secondary{
     color:var(--clr-secondary)
+}
+
+.theme__mode-toggle{
+    z-index:10;
+    position:absolute;
+    display:flex;
+    align-items: center;
+    gap:0.5rem;
+    top:2rem;
+    right:3rem;
+    .toggle-container{
+        position:relative;
+        width:2.6rem;
+        height:1.6rem;
+        background-color:var(--clr-secondary);
+        border-radius:2rem;
+    }
+    .toggle-icon{
+        width:1.4rem;
+        height:1.4rem;
+        background:url(../img/icons/sun.svg) no-repeat;
+        background-size:1.4rem;
+    }
+    .toggle-btn{
+        position:absolute;
+        top:0.2rem;
+        left:0.2rem;
+        width:1.2rem;
+        height:1.2rem;
+        background-color:var(--clr-light);
+        border-radius:2rem;
+        transition:transform 0.6s var(--ease-out);
+    }
+    &.active{
+        .toggle-btn{
+           transform:translateX(1rem);
+        }
+        .toggle-icon{
+            background:url(../img/icons/moon.svg) no-repeat;
+            background-size:1.4rem;
+        }
+    }
 }

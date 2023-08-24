@@ -4,11 +4,10 @@
 .work{
     z-index:4;
     position:relative;
-    background-color:var(--clr-primary);
-    border-bottom:0.5px solid var(--clr-border);
+    border-bottom:var(--border-width) solid var(--clr-border);
     overflow:hidden;
     .project{
-        border-top:0.5px solid var(--clr-border);
+        border-top:var(--border-width) solid var(--clr-border);
         .container{
             position:relative;
             height:var(--large-slide);
@@ -56,7 +55,6 @@
     justify-content: center;
     height:100%;
     padding:2rem;
-    background-color:var(--clr-primary);
     .role{
         margin-top:0.5rem;
         color:var(--clr-secondary);
@@ -83,9 +81,8 @@
     align-items: center;
     width:var(--large-slide);
     height:var(--large-slide);
-    background-color:var(--clr-primary);
-    border-right:0.5px solid var(--clr-border);
-    border-left:0.5px solid var(--clr-border);
+    border-right:var(--border-width) solid var(--clr-border);
+    border-left:var(--border-width) solid var(--clr-border);
     .project__slider{
         width: var(--large-slide);
         height:var(--large-slide);
@@ -147,9 +144,6 @@
     .project__blur{
         .project__slider{
            padding-left:12rem;
-        }
-        .project__slides{
-            opacity:0.5;
         }
         .project__info{
             h2{

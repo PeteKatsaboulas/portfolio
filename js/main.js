@@ -3,7 +3,7 @@ gsap.registerPlugin(Draggable)
 gsap.registerPlugin(ScrollTrigger)
 
 // Loader
-var loader = document.getElementById("load-stuff")
+//var loader = document.getElementById("load-stuff")
 
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
@@ -95,6 +95,22 @@ window.onresize = () => {
         gsap.to(".project__slides", {x: 0, duration: 0});
         
     }        
+}
+
+let toggleTheme    = document.querySelector(".theme__mode-toggle")
+let toggleThemeBtn = document.querySelector(".toggle-btn")
+
+toggleTheme.onclick = () => {
+  let theme = document.body.getAttribute("data-theme")
+
+  if(theme == "light") {
+    document.body.setAttribute("data-theme", "dark");
+  } else {
+    document.body.setAttribute("data-theme", "light");
+  }
+
+  toggleTheme.classList.toggle("active");
+
 }
 
 

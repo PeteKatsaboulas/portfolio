@@ -13,22 +13,28 @@ html{
   font-size:62.5%;
 }
 body{
-  font-family: 'PP Mori';
-  font-size:1.4rem;
-  line-height:1.4;
-  letter-spacing:-0.015em;
+  font-family: 'DM Sans', sans-serif;
+  font-size:1.5rem;
+  line-height:1.3;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
 }
 h1{
   font-size:3.2rem;
   letter-spacing:-0.035em;
-  line-height:1.1;
+  line-height:1;
 }
 h2{
   font-size:2.2rem;
   letter-spacing:-0.035em;
-  line-height:1.1;
+  line-height:1;
+}
+
+.fs--1{
+  font-size:3.2rem;
+}
+.fs--2{
+  font-size:2.2rem;
 }
 
 .ff--mono{
@@ -39,25 +45,32 @@ h2{
   margin-top:0.2em;
 }
 
+.fw--medium{
+  font-weight:500;
+}
+.fw--semibold{
+  font-weight:600;
+}
+
 .highlight{
   color:var(--clr-highlight); 
 }
 
 @media(min-width:960px){
-  h1{
+  .fs--1{
     font-size:3.6rem;
   }
-  h2{
+  .fs--2{
     font-size:2.4rem;
   }
 }
 
 @media(min-width:1280px){
-  h1{
-    font-size:4.4rem;
+  .fs--1{
+    font-size:6rem;
   }
-  h2{
-    font-size:3rem;
+  .fs--2{
+    font-size:3.6rem;
   }
 }
 
