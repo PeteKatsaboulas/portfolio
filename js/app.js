@@ -2,9 +2,15 @@
 gsap.registerPlugin(Draggable)
 gsap.registerPlugin(ScrollTrigger)
 
-document.addEventListener("DOMContentLoaded", function() {
-  gsap.to([".headline", ".cta", ".work", ".theme__mode-toggle"], {y: 0, opacity:1, duration:0, stagger: 0.1});
-});
+// Doc ready animation
+document.onreadystatechange = function() {
+  if (document.readyState !== "complete") {
+      document.querySelector("#loader").style.visibility = "visible";
+  } else {
+      document.querySelector("#loader").style.display = "none";
+      gsap.to([".headline", ".cta", ".work", ".theme__mode-toggle"], {y: 0, opacity:1, duration:0, stagger: 0.1});
+  }
+};
 
 // Lenis smooth scroll
 const lenis = new Lenis()
@@ -58,6 +64,7 @@ projects.forEach( (project) => {
     });
 })
 
+// Hero parallax
 if(window.innerWidth > 600) {
   gsap.to(".hero", {
     yPercent: 100,
@@ -68,7 +75,7 @@ if(window.innerWidth > 600) {
   });
 }
 
- 
+// Resize / Fix for ios trigger resize on scroll
 let windowWidthResize = window.innerWidth;
 window.onresize = () => {   
     if (window.innerWidth != windowWidthResize) {
@@ -96,8 +103,6 @@ toggleTheme.onclick = () => {
   }
   toggleTheme.classList.toggle("active");
 }
-
-
 
 
 
