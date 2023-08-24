@@ -3,7 +3,7 @@ gsap.registerPlugin(Draggable)
 gsap.registerPlugin(ScrollTrigger)
 
 document.addEventListener("DOMContentLoaded", function() {
-  gsap.to([".headline", ".cta", ".work"], {y: 0, opacity:1, duration:0, stagger: 0.1});
+  gsap.to([".headline", ".cta", ".work", ".theme__mode-toggle"], {y: 0, opacity:1, duration:0, stagger: 0.1});
 });
 
 // Lenis smooth scroll

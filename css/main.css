@@ -359,7 +359,7 @@ h2 {
     font-size: 3.6rem;
   }
 }
-.headline, .cta, .work {
+.headline, .cta, .work, .theme__mode-toggle {
   opacity: 0;
   transform: translateY(10rem);
   will-change: transform;
