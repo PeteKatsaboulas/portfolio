@@ -300,6 +300,7 @@ h2 {
 }
 
 #load-stuff {
+  display: none;
   z-index: 20;
   position: fixed;
   display: flex;
@@ -459,7 +460,7 @@ svg.eyeball circle {
     left: 50%;
   }
   .hero .cta:after {
-    content: "Drag projects...enjoy";
+    content: "Drag projects to view...enjoy";
   }
 }
 @media (min-width: 1280px) {

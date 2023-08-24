@@ -5,6 +5,7 @@
     transition:transform 1.2s var(--ease-out), opacity 1.2s var(--ease-out);
 }
 #load-stuff{
+    display:none;
     z-index:20;
     position:fixed;
     display:flex;
