@@ -2,22 +2,9 @@
 gsap.registerPlugin(Draggable)
 gsap.registerPlugin(ScrollTrigger)
 
-// Loader
-//var loader = document.getElementById("load-stuff")
-
-document.onreadystatechange = function () {
-  if (document.readyState !== "complete") {
-      //loader.style.visibility = "visible";
-      console.log("loading...")
-  } else {
-    window.scrollTo(0, 0);
-    //loader.style.display = "none";
-    gsap.to([".headline", ".cta", ".work"], {y: 0, opacity:1, duration:0, stagger: 0.1});
-
-    console.log("loaded!")
-  }
-};
-
+document.addEventListener("DOMContentLoaded", function() {
+  gsap.to([".headline", ".cta", ".work"], {y: 0, opacity:1, duration:0, stagger: 0.1});
+});
 
 // Lenis smooth scroll
 const lenis = new Lenis()
@@ -81,10 +68,8 @@ if(window.innerWidth > 600) {
   });
 }
 
-
  
 let windowWidthResize = window.innerWidth;
-
 window.onresize = () => {   
     if (window.innerWidth != windowWidthResize) {
         // Update the window and slide widths

@@ -11,7 +11,7 @@
         align-items: center;
         gap:0.5rem;
         bottom:1rem;
-        right:3rem;
+        right:2rem;
         font-size:1.1rem;
         color:var(--clr-secondary);
         &:after{
@@ -29,7 +29,7 @@
             right:auto;
             left:50%;
             &:after{
-                content:"Drag projects to view...enjoy";
+                content:"Drag left...enjoy";
             }
         }
     }

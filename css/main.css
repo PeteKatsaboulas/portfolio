@@ -131,7 +131,7 @@ body, .work, .project__square {
   align-items: center;
   gap: 0.5rem;
   top: 2rem;
-  right: 3rem;
+  right: 2rem;
 }
 .theme__mode-toggle .toggle-container {
   position: relative;
@@ -142,10 +142,10 @@ body, .work, .project__square {
   cursor: pointer;
 }
 .theme__mode-toggle .toggle-icon {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.6rem;
+  height: 1.6rem;
   background: url(../img/icons/sun.svg) no-repeat;
-  background-size: 1.4rem;
+  background-size: 1.6rem;
 }
 .theme__mode-toggle .toggle-btn {
   position: absolute;
@@ -162,7 +162,7 @@ body, .work, .project__square {
 }
 .theme__mode-toggle.active .toggle-icon {
   background: url(../img/icons/moon.svg) no-repeat;
-  background-size: 1.4rem;
+  background-size: 1.6rem;
 }
 
 .container {
@@ -451,13 +451,13 @@ svg.eyeball circle {
   }
 }
 .heart-svg {
-  width: 2.6rem;
+  width: 3rem;
   transition: all 0.6s var(--ease-in-out-quad);
   animation: spinHeart 3s infinite;
 }
 @media (min-width: 1280px) {
   .heart-svg {
-    width: 4rem;
+    width: 5rem;
   }
 }
 
@@ -510,7 +510,7 @@ svg.eyeball circle {
   align-items: center;
   gap: 0.5rem;
   bottom: 1rem;
-  right: 3rem;
+  right: 2rem;
   font-size: 1.1rem;
   color: var(--clr-secondary);
 }
@@ -527,7 +527,7 @@ svg.eyeball circle {
     left: 50%;
   }
   .hero .cta:after {
-    content: "Drag projects to view...enjoy";
+    content: "Drag left...enjoy";
   }
 }
 @media (min-width: 1280px) {
@@ -603,7 +603,7 @@ svg.eyeball circle {
   gap: 0.8rem;
 }
 .project__info a svg {
-  margin-bottom: -0.2rem;
+  margin-bottom: -0.1rem;
   width: 1.6rem;
   stroke: var(--clr-secondary);
 }
@@ -667,7 +667,7 @@ svg.eyeball circle {
     padding: 3rem;
   }
   .project__info a svg {
-    margin-bottom: -0.1rem;
+    margin-bottom: 0rem;
     width: 1.7rem;
   }
 
@@ -683,7 +683,7 @@ svg.eyeball circle {
     padding: 4rem;
   }
   .project__info a svg {
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.3rem;
     width: 2rem;
   }
 

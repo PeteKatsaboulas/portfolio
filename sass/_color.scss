@@ -29,7 +29,7 @@ body, .work, .project__square{
     align-items: center;
     gap:0.5rem;
     top:2rem;
-    right:3rem;
+    right:2rem;
     .toggle-container{
         position:relative;
         width:2.6rem;
@@ -39,10 +39,10 @@ body, .work, .project__square{
         cursor:pointer;
     }
     .toggle-icon{
-        width:1.4rem;
-        height:1.4rem;
+        width:1.6rem;
+        height:1.6rem;
         background:url(../img/icons/sun.svg) no-repeat;
-        background-size:1.4rem;
+        background-size:1.6rem;
     }
     .toggle-btn{
         position:absolute;
@@ -60,7 +60,7 @@ body, .work, .project__square{
         }
         .toggle-icon{
             background:url(../img/icons/moon.svg) no-repeat;
-            background-size:1.4rem;
+            background-size:1.6rem;
         }
     }
 }
