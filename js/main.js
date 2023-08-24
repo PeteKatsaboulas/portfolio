@@ -97,6 +97,7 @@ window.onresize = () => {
     }        
 }
 
+// Toogle dark mode
 let toggleTheme    = document.querySelector(".theme__mode-toggle")
 let toggleThemeBtn = document.querySelector(".toggle-btn")
 
@@ -108,9 +109,7 @@ toggleTheme.onclick = () => {
   } else {
     document.body.setAttribute("data-theme", "light");
   }
-
   toggleTheme.classList.toggle("active");
-
 }
 
 

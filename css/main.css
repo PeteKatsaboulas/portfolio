@@ -139,6 +139,7 @@ body, .work, .project__square {
   height: 1.6rem;
   background-color: var(--clr-secondary);
   border-radius: 2rem;
+  cursor: pointer;
 }
 .theme__mode-toggle .toggle-icon {
   width: 1.4rem;
@@ -244,7 +245,7 @@ body, .work, .project__square {
   width: 100%;
   height: 10rem;
   background-color: var(--clr-primary);
-  border-top: 0.5px solid var(--clr-border);
+  border-top: var(--border-width) solid var(--clr-border);
 }
 .footer:after {
   content: "";
@@ -253,7 +254,7 @@ body, .work, .project__square {
   top: 0;
   left: 50%;
   height: 100%;
-  border-left: 0.5px solid var(--clr-border);
+  border-left: var(--border-width) solid var(--clr-border);
 }
 
 .footer__link {
@@ -272,6 +273,8 @@ body, .work, .project__square {
   z-index: 1;
   position: relative;
   display: block;
+  font-size: 1.6rem;
+  letter-spacing: -0.015em;
   transition: all 0.8s var(--ease-out);
 }
 @media (min-width: 960px) {
@@ -511,7 +514,7 @@ svg.eyeball circle {
   align-items: center;
   gap: 0.5rem;
   bottom: 1rem;
-  right: 5rem;
+  right: 3rem;
   font-size: 1.1rem;
   color: var(--clr-secondary);
 }
