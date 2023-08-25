@@ -2,6 +2,17 @@
 gsap.registerPlugin(Draggable)
 gsap.registerPlugin(ScrollTrigger)
 
+// Window load
+let loader = document.querySelector(".loader")
+loader.classList.add("load");
+
+window.onload = () => {
+  loader.style.display = "none";
+  gsap.to([".headline", ".cta", ".work", ".theme__mode-toggle"], {y: 0, opacity:1, duration:0, stagger: 0.1});
+  requestAnimationFrame(raf);
+  projectSlider();
+}
+
 // Lenis smooth scroll
 const lenis = new Lenis()
 
@@ -11,12 +22,12 @@ function raf(time) {
 }
 
 // Project slider
-function projectSlider(){
-  let styles      = getComputedStyle(document.documentElement),
-      largeSlide  = parseInt(styles.getPropertyValue('--large-slide'), 10), 
-      smallSlide  = parseInt(styles.getPropertyValue('--small-slide'), 10),
-      projects    = document.querySelectorAll(".project")
-    
+let styles      = getComputedStyle(document.documentElement),
+    largeSlide  = parseInt(styles.getPropertyValue('--large-slide'), 10), 
+    smallSlide  = parseInt(styles.getPropertyValue('--small-slide'), 10),
+    projects    = document.querySelectorAll(".project")
+
+function projectSlider(){  
   projects.forEach( (project) => {
       let sections      = project.querySelectorAll(".project__slide"),
           blur          = project.querySelector(".project__blur"), 
@@ -66,29 +77,18 @@ if(window.innerWidth > 600) {
   });
 }
 
-// Window load
-let loader = document.querySelector(".loader")
-loader.classList.add("load");
-
-window.onload = () => {
-  loader.style.display = "none";
-  gsap.to([".headline", ".cta", ".work", ".theme__mode-toggle"], {y: 0, opacity:1, duration:0, stagger: 0.1});
-  requestAnimationFrame(raf)
-  projectSlider()
-}
-
 // Resize / Fix for ios trigger resize on scroll
-let windowWidthResize = window.innerWidth,
-    styles            = getComputedStyle(document.documentElement),   
-    largeSlide        = parseInt(styles.getPropertyValue('--large-slide'), 10), 
-		smallSlide        = parseInt(styles.getPropertyValue('--small-slide'), 10)
-
+let windowWidthResize = window.innerWidth;
 window.onresize = () => {   
-	if (window.innerWidth != windowWidthResize) {
-		// Update the window and slide widths
-		windowWidthResize = window.innerWidth;
-		gsap.to(".project__slides", {x: 0, duration: 0});  
-	}        
+    if (window.innerWidth != windowWidthResize) {
+        // Update the window and slide widths
+        windowWidthResize = window.innerWidth;
+        largeSlide  = parseInt(styles.getPropertyValue('--large-slide'), 10) 
+        smallSlide  = parseInt(styles.getPropertyValue('--small-slide'), 10)
+
+        gsap.to(".project__slides", {x: 0, duration: 0});
+        
+    }        
 }
 
 // Toogle dark mode
@@ -104,6 +104,7 @@ toggleTheme.onclick = () => {
     document.body.setAttribute("data-theme", "light");
   }
   toggleTheme.classList.toggle("active");
+  document.querySelector("header").classList.toggle("dark");
 }
 
 

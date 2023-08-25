@@ -1,14 +1,6 @@
 // ———————————————————————–––––––––––––––––––––––––––––––––––
 // Type
 // ———————————————————————–––––––––––––––––––––––––––––––––––
-@font-face {
-  font-family: 'PP Mori';
-  src: url('../fonts/ppmori-regular-webfont.woff2') format('woff2'),
-       url('../fonts/ppmori-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 html{
   font-size:62.5%;
 }
@@ -16,13 +8,13 @@ body{
   font-family: 'DM Sans', sans-serif;
   font-weight:500;
   font-size:1.5rem;
-  letter-spacing:-0.02em;
+  letter-spacing:-0.01em;
   line-height:1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
 }
 h1, h2, h3{
-  letter-spacing:-0.035em;
+  letter-spacing:-0.025em;
   line-height:1.1;
 }
 .fs--1{

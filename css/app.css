@@ -100,14 +100,14 @@ meter {
 
 [data-theme="light"] {
   --clr-dark:#181818;
-  --clr-light:#fff;
+  --clr-light:#f6f6f6;
   --clr-secondary:#888;
   --clr-highlight:#f84c26;
   --clr-border:#111;
 }
 
 [data-theme="dark"] {
-  --clr-dark:#fff;
+  --clr-dark:#f6f6f6;
   --clr-light:#181818;
   --clr-secondary:#999;
   --clr-highlight:#f84c26;
@@ -125,19 +125,15 @@ body, .work, .project__square {
 }
 
 .theme__mode-toggle {
-  z-index: 10;
-  position: absolute;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  top: 2rem;
-  right: 2rem;
 }
 .theme__mode-toggle .toggle-container {
   position: relative;
   width: 2.6rem;
   height: 1.6rem;
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-dark);
   border-radius: 2rem;
   cursor: pointer;
 }
@@ -145,7 +141,7 @@ body, .work, .project__square {
   width: 1.6rem;
   height: 1.6rem;
 }
-.theme__mode-toggle .toggle-icon__light {
+.theme__mode-toggle .toggle-icon__dark {
   display: none;
 }
 .theme__mode-toggle .toggle-btn {
@@ -162,10 +158,43 @@ body, .work, .project__square {
   transform: translateX(1rem);
 }
 .theme__mode-toggle.active .toggle-icon__light {
-  display: block;
+  display: none;
 }
 .theme__mode-toggle.active .toggle-icon__dark {
+  display: block;
+}
+
+header {
+  z-index: 40;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  height: 5rem;
+  padding-inline: 2rem;
+  background: var(--clr-light);
+  border-bottom: var(--border-width) solid var(--clr-border);
+}
+header .logo img {
+  display: block;
+}
+header .logo-light {
   display: none;
+}
+header .logo-light img {
+  display: block;
+}
+header.dark .logo {
+  display: none;
+}
+header.dark .logo-light {
+  display: block;
+}
+@media (min-width: 960px) {
+  header {
+    padding-inline: 3rem;
+  }
 }
 
 .container {
@@ -196,7 +225,7 @@ body, .work, .project__square {
   display: flex;
   align-items: center;
   padding-block: 12rem;
-  min-height: calc(100vh - 10rem);
+  min-height: calc(100vh - 14.8rem);
 }
 .info .flex {
   display: flex;
@@ -298,12 +327,6 @@ body, .work, .project__square {
   color: var(--clr-highlight);
 }
 
-@font-face {
-  font-family: 'PP Mori';
-  src: url("../fonts/ppmori-regular-webfont.woff2") format("woff2"), url("../fonts/ppmori-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 html {
   font-size: 62.5%;
 }
@@ -312,14 +335,14 @@ body {
   font-family: 'DM Sans', sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3 {
-  letter-spacing: -0.035em;
+  letter-spacing: -0.025em;
   line-height: 1.1;
 }
 
@@ -642,7 +665,7 @@ svg.eyeball circle {
   gap: 0.2em;
 }
 .project__info a svg {
-  margin-bottom: -0.05rem;
+  margin-bottom: -0.04rem;
   width: 1.6rem;
   stroke: var(--clr-secondary);
 }
@@ -706,7 +729,7 @@ svg.eyeball circle {
     padding: 3rem;
   }
   .project__info a svg {
-    margin-bottom: 0rem;
+    margin-bottom: 0.1rem;
     width: 1.7rem;
   }
 
@@ -722,7 +745,7 @@ svg.eyeball circle {
     padding: 4rem;
   }
   .project__info a svg {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
     width: 2rem;
   }
 

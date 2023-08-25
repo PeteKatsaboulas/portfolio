@@ -1,3 +1,37 @@
+header{
+   z-index:40;
+   position:sticky;
+   display:flex;
+   align-items: center;
+   justify-content: space-between;
+   top:0;
+   height:5rem;
+   padding-inline:2rem;
+   background:var(--clr-light);
+   border-bottom:var(--border-width) solid var(--clr-border);
+   .logo{
+      img{
+         display:block;
+      }
+   }
+   .logo-light{
+      display:none;
+      img{
+         display:block;
+      }
+   }
+   &.dark{
+      .logo{
+         display:none;
+      }
+      .logo-light{
+         display:block;
+      }
+   }
+   @media(min-width:960px){
+      padding-inline:3rem;
+   }
+}
 // ———————————————————————–––––––––––––––––––––––––––––––––––
 // Layout
 // ———————————————————————–––––––––––––––––––––––––––––––––––
@@ -32,7 +66,7 @@
    display:flex;
    align-items: center;
    padding-block:12rem;
-   min-height:calc(100vh - 10rem);
+   min-height:calc(100vh - 14.8rem);
    .flex{
       display:flex;
       flex-direction: column;
