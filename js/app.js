@@ -2,16 +2,6 @@
 gsap.registerPlugin(Draggable)
 gsap.registerPlugin(ScrollTrigger)
 
-// Doc ready animation
-document.onreadystatechange = function() {
-  if (document.readyState !== "complete") {
-      document.querySelector("#loader").style.visibility = "visible";
-  } else {
-      document.querySelector("#loader").style.display = "none";
-      gsap.to([".headline", ".cta", ".work", ".theme__mode-toggle"], {y: 0, opacity:1, duration:0, stagger: 0.1});
-  }
-};
-
 // Lenis smooth scroll
 const lenis = new Lenis()
 
@@ -19,50 +9,51 @@ function raf(time) {
   lenis.raf(time)
   requestAnimationFrame(raf)
 }
-requestAnimationFrame(raf)
 
 // Project slider
-let styles      = getComputedStyle(document.documentElement),
-    largeSlide  = parseInt(styles.getPropertyValue('--large-slide'), 10), 
-    smallSlide  = parseInt(styles.getPropertyValue('--small-slide'), 10),
-    projects    = document.querySelectorAll(".project")
+function projectSlider(){
+  let styles      = getComputedStyle(document.documentElement),
+      largeSlide  = parseInt(styles.getPropertyValue('--large-slide'), 10), 
+      smallSlide  = parseInt(styles.getPropertyValue('--small-slide'), 10),
+      projects    = document.querySelectorAll(".project")
     
-projects.forEach( (project) => {
-    let sections      = project.querySelectorAll(".project__slide"),
-        blur          = project.querySelector(".project__blur"), 
-        blurSlides    = blur.querySelector(".project__slides"),
-        square        = project.querySelector(".project__square")
+  projects.forEach( (project) => {
+      let sections      = project.querySelectorAll(".project__slide"),
+          blur          = project.querySelector(".project__blur"), 
+          blurSlides    = blur.querySelector(".project__slides"),
+          square        = project.querySelector(".project__square")
 
-    let projectSlider = project.querySelector(".project__slider"),
-        clone         = projectSlider.cloneNode(true)  
-        square.appendChild(clone);
+      let projectSlider = project.querySelector(".project__slider"),
+          clone         = projectSlider.cloneNode(true)  
+          square.appendChild(clone);
 
-    let squareSlides  = square.querySelector(".project__slides")
+      let squareSlides  = square.querySelector(".project__slides")
 
-    Draggable.create(blurSlides, {
-        type: "x",
-        trigger: project,
-        onDrag: function() {
-            gsap.to(squareSlides, {
-                x: this.x * largeSlide / smallSlide,
-                duration: 0,
+      Draggable.create(blurSlides, {
+          type: "x",
+          trigger: project,
+          onDrag: function() {
+              gsap.to(squareSlides, {
+                  x: this.x * largeSlide / smallSlide,
+                  duration: 0,
+              })
+          },
+          onDragEnd: function() {
+            let snapped = gsap.utils.snap(smallSlide, this.x);
+          
+            gsap.to(blurSlides, {
+              x: gsap.utils.clamp((sections.length - 1) * -smallSlide, 0, snapped) 
             })
-        },
-        onDragEnd: function() {
-          let snapped = gsap.utils.snap(smallSlide, this.x);
-        
-          gsap.to(blurSlides, {
-            x: gsap.utils.clamp((sections.length - 1) * -smallSlide, 0, snapped) 
-          })
-          gsap.to(squareSlides, {
-            x: gsap.utils.clamp((sections.length - 1 ) * -largeSlide, 0, snapped * largeSlide / smallSlide) 
-          })
-        },
-        snap: {
-          x: gsap.utils.snap(smallSlide / sections.length * sections.offsetWidth )
-        }
-    });
-})
+            gsap.to(squareSlides, {
+              x: gsap.utils.clamp((sections.length - 1 ) * -largeSlide, 0, snapped * largeSlide / smallSlide) 
+            })
+          },
+          snap: {
+            x: gsap.utils.snap(smallSlide / sections.length * sections.offsetWidth )
+          }
+      });
+  })
+}
 
 // Hero parallax
 if(window.innerWidth > 600) {
@@ -75,18 +66,29 @@ if(window.innerWidth > 600) {
   });
 }
 
-// Resize / Fix for ios trigger resize on scroll
-let windowWidthResize = window.innerWidth;
-window.onresize = () => {   
-    if (window.innerWidth != windowWidthResize) {
-        // Update the window and slide widths
-        windowWidthResize = window.innerWidth;
-        largeSlide  = parseInt(styles.getPropertyValue('--large-slide'), 10) 
-        smallSlide  = parseInt(styles.getPropertyValue('--small-slide'), 10)
+// Window load
+let loader = document.querySelector(".loader")
+loader.classList.add("load");
 
-        gsap.to(".project__slides", {x: 0, duration: 0});
-        
-    }        
+window.onload = () => {
+  loader.style.display = "none";
+  gsap.to([".headline", ".cta", ".work", ".theme__mode-toggle"], {y: 0, opacity:1, duration:0, stagger: 0.1});
+  requestAnimationFrame(raf)
+  projectSlider()
+}
+
+// Resize / Fix for ios trigger resize on scroll
+let windowWidthResize = window.innerWidth,
+    styles            = getComputedStyle(document.documentElement),   
+    largeSlide        = parseInt(styles.getPropertyValue('--large-slide'), 10), 
+		smallSlide        = parseInt(styles.getPropertyValue('--small-slide'), 10)
+
+window.onresize = () => {   
+	if (window.innerWidth != windowWidthResize) {
+		// Update the window and slide widths
+		windowWidthResize = window.innerWidth;
+		gsap.to(".project__slides", {x: 0, duration: 0});  
+	}        
 }
 
 // Toogle dark mode

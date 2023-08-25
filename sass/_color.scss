@@ -15,7 +15,7 @@
 body, .work, .project__square{
     background-color:var(--clr-light);
     color:var(--clr-dark);
-    transition:background-color 0.8s var(--ease-out), color 0.8s var(--ease-out);
+    transition:background-color 0.4s var(--ease-out), color 0.4s var(--ease-out);
 }
 
 .clr--secondary{
@@ -41,8 +41,9 @@ body, .work, .project__square{
     .toggle-icon{
         width:1.6rem;
         height:1.6rem;
-        background:url(../img/icons/sun.svg) no-repeat;
-        background-size:1.6rem;
+    }
+    .toggle-icon__light{
+        display:none;
     }
     .toggle-btn{
         position:absolute;
@@ -58,9 +59,11 @@ body, .work, .project__square{
         .toggle-btn{
            transform:translateX(1rem);
         }
-        .toggle-icon{
-            background:url(../img/icons/moon.svg) no-repeat;
-            background-size:1.6rem;
+        .toggle-icon__light{
+            display:block;
+        }
+        .toggle-icon__dark{
+            display:none;
         }
     }
 }
