@@ -63,10 +63,23 @@ function projectSlider(){
             x: gsap.utils.snap(smallSlide / sections.length * sections.offsetWidth )
           }
       });
+
+
+      let projectInfoBtn = project.querySelector(".action__info")
+      let projectInfo = project.querySelector(".project__info")
+
+      projectInfoBtn.onclick = () => {
+        projectInfo.classList.toggle("active")
+
+      }
+
+
+
   })
 }
 
 // Hero parallax
+/*
 if(window.innerWidth > 600) {
   gsap.to(".hero", {
     yPercent: 100,
@@ -76,6 +89,7 @@ if(window.innerWidth > 600) {
     }, 
   });
 }
+*/
 
 // Resize / Fix for ios trigger resize on scroll
 let windowWidthResize = window.innerWidth;
@@ -106,6 +120,9 @@ toggleTheme.onclick = () => {
   toggleTheme.classList.toggle("active");
   document.querySelector("header").classList.toggle("dark");
 }
+
+
+
 
 
 

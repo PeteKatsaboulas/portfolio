@@ -85,21 +85,13 @@ header{
       &:last-child{
          max-width:32rem;
       }
-      @media(min-width:960px){
-         padding-left:3rem;
-      }
       @media(min-width:1280px){
          gap:1.5rem;
          flex-basis:50%;
-         padding-left:4rem;
          &:last-child{
             max-width:24rem;
             margin-top:0.2rem;
-            padding-left:0rem;
          }
-      }
-      @media(min-width:1600px){
-         padding-left:6rem;
       }
    }
    h3{
