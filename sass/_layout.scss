@@ -108,9 +108,10 @@ header{
       }
    }
    h3{
-      img{
+      svg{
          vertical-align:middle;
          margin-top:-0.8rem;
+         stroke:var(--clr-highlight);
       }
    }
    h4{

@@ -102,15 +102,15 @@ meter {
   --clr-dark:#181818;
   --clr-light:#f6f6f6;
   --clr-secondary:#888;
-  --clr-highlight:#f84c26;
+  --clr-highlight:#19e9bf;
   --clr-border:#111;
 }
 
 [data-theme="dark"] {
   --clr-dark:#f6f6f6;
   --clr-light:#181818;
-  --clr-secondary:#999;
-  --clr-highlight:#f84c26;
+  --clr-secondary:#888;
+  --clr-highlight:#26f8ce;
   --clr-border:#727272;
 }
 
@@ -274,9 +274,10 @@ header.dark .logo-light {
     padding-left: 6rem;
   }
 }
-.about h3 img {
+.about h3 svg {
   vertical-align: middle;
   margin-top: -0.8rem;
+  stroke: var(--clr-highlight);
 }
 .about h4 {
   margin-bottom: 0.1rem;
@@ -337,7 +338,7 @@ html {
 
 body {
   font-family: 'DM Sans', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   letter-spacing: -0.01em;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
@@ -515,14 +516,16 @@ svg.eyeball circle {
     transform: translateX(0);
   }
 }
-.heart-svg {
+svg.heart {
   width: 3rem;
+  height: 3rem;
   transition: all 0.6s var(--ease-in-out-quad);
   animation: spinHeart 3s infinite;
 }
 @media (min-width: 1280px) {
-  .heart-svg {
+  svg.heart {
     width: 4rem;
+    height: 4rem;
   }
 }
 
@@ -569,19 +572,6 @@ svg.eyeball circle {
   padding-bottom: 10rem;
   padding-inline: 0;
 }
-.hero .cta {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  bottom: 1rem;
-  right: 2rem;
-  font-size: 1.1rem;
-  color: var(--clr-secondary);
-}
-.hero .cta:after {
-  content: "Swipe left...enjoy";
-}
 
 @media (min-width: 960px) {
   .hero .headline {
@@ -602,7 +592,7 @@ svg.eyeball circle {
 }
 @media (min-width: 1600px) {
   .hero .headline {
-    padding-left: 6rem;
+    padding-left: 3rem;
   }
 }
 .work {
@@ -622,6 +612,7 @@ svg.eyeball circle {
   margin-left: -0.1rem;
   height: 100%;
   width: var(--border-width);
+  background-color: var(--clr-border);
 }
 
 .work__grid {
@@ -635,11 +626,13 @@ svg.eyeball circle {
     grid-template-columns: 1fr 1fr;
   }
 }
+.work__grid .align--right {
+  grid-column: 2 / 3;
+}
 
 .project {
   position: relative;
-  padding: 1.5rem;
-  border-bottom: var(--border-width) solid var(--clr-border);
+  padding: 3rem;
   overflow: hidden;
 }
 .project.info .project__info {
@@ -647,7 +640,7 @@ svg.eyeball circle {
   opacity: 1;
 }
 .project.info .project__slider {
-  transform: translate(4rem, 75%) rotate(-8deg);
+  transform: translate(4rem, 50%) rotate(-8deg);
 }
 
 .project__header {
@@ -670,7 +663,7 @@ svg.eyeball circle {
   left: 0;
   transform: translateY(6rem);
   opacity: 0;
-  padding-inline: 1.5rem;
+  padding-inline: 3rem;
   transition: all 0.8s var(--ease-out);
 }
 .project__info .details {
@@ -689,7 +682,7 @@ svg.eyeball circle {
   padding-inline: 1.5em;
   height: 2.4rem;
   line-height: 2.5rem;
-  background: var(--clr-dark);
+  background: var(--clr-secondary);
   color: var(--clr-light);
 }
 
@@ -724,13 +717,31 @@ svg.eyeball circle {
   margin-block: 0.3rem;
 }
 .slide__thumbs .thumb {
+  position: relative;
   flex-basis: calc(100% / 8);
   padding-right: 0.3rem;
+  cursor: pointer;
 }
 .slide__thumbs .thumb img, .slide__thumbs .thumb video {
   display: block;
   width: 100%;
   height: auto;
+  user-select: none;
+}
+.slide__thumbs .thumb:after {
+  content: "";
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 0.3rem);
+  height: 100%;
+  border: 2px solid transparent;
+  transition: border-color 0.8s var(--ease-out);
+}
+.slide__thumbs .thumb:hover:after, .slide__thumbs .thumb.active:after {
+  border-color: var(--clr-highlight);
 }
 
 /*# sourceMappingURL=app.css.map */

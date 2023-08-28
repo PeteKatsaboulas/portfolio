@@ -5,19 +5,6 @@
         padding-bottom:10rem;
         padding-inline:0;
     }
-    .cta{
-        position:absolute;
-        display:flex;
-        align-items: center;
-        gap:0.5rem;
-        bottom:1rem;
-        right:2rem;
-        font-size:1.1rem;
-        color:var(--clr-secondary);
-        &:after{
-            content:"Swipe left...enjoy";
-        }
-    }
 }
 
 @media(min-width:960px) {
@@ -44,7 +31,7 @@
 @media(min-width:1600px) {
     .hero{
         .headline{
-            padding-left:6rem;
+            padding-left:3rem;
         }
     }
 }

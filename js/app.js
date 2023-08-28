@@ -35,15 +35,21 @@ projects.forEach( (project) => {
         infoBtn = project.querySelector(".project__info-btn")
         
     target.innerHTML = thumbs[0].innerHTML
+    thumbs[0].classList.add("active")
 
     thumbs.forEach( (thumb) => {
         let src = thumb.innerHTML
-        thumb.onmouseenter = () => {
+        thumb.onmousedown= (e) => {
            target.innerHTML = src
            gsap.fromTo(target, {scale:1.1}, {scale:1.01, duration: 0.6, ease: "power3.out"})
+
+           thumbs.forEach( (thumb) => {
+            thumb.classList.remove("active")
+           })
+           thumb.classList.add("active")
         }
     })
-    infoBtn.onclick = () => {
+    infoBtn.onmousedown = () => {
         project.classList.toggle("info")
         if(project.classList.contains("info")){
             infoBtn.textContent = "close"
