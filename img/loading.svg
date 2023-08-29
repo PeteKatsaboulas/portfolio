@@ -1,0 +1,8 @@
+<svg id="uuid-da1856ea-e408-4884-8bde-899a71eb01fe" xmlns="http://www.w3.org/2000/svg" width="311" height="63" viewBox="0 0 311 63">
+    <rect width="311" height="63" fill="#fff" stroke-width="0"/>
+    <path d="m50.7,51.3h-28.3V11.7h5.7v34h22.7v5.7Zm17-2.8h-2.8v-2.8h-2.8v-28.3h2.8v-2.8h2.8v-2.8h17v2.8h2.8v2.8h2.8v28.3h-2.8v2.8h-2.8v2.8h-17v-2.8Zm0-5.7h2.8v2.8h11.3v-2.8h2.8v-22.7h-2.8v-2.8h-11.3v2.8h-2.8v22.7Zm62.3,8.5h-5.7v-11.3h-17v11.3h-5.7v-28.3h2.8v-2.8h2.8v-2.8h2.8v-2.8h2.8v-2.8h5.7v2.8h2.8v2.8h2.8v2.8h2.8v2.8h2.8v28.3Zm-22.7-25.5v8.5h17v-8.5h-2.8v-2.8h-2.8v-2.8h-5.7v2.8h-2.8v2.8h-2.8Zm56.6-11.3h2.8v2.8h2.8v28.3h-2.8v2.8h-2.8v2.8h-22.7V11.7h22.7v2.8Zm-2.8,28.3h2.8v-22.7h-2.8v-2.8h-14.2v28.3h14.2v-2.8Zm36.8-25.5v28.3h5.7v5.7h-17v-5.7h5.7v-28.3h-5.7v-5.7h17v5.7h-5.7Zm51,34h-5.7v-8.5h-2.8v-2.8h-2.8v-2.8h-2.8v-2.8h-2.8v-2.8h-2.8v-2.8h-2.8v22.7h-5.7V11.7h5.7v8.5h2.8v2.8h2.8v2.8h2.8v2.8h2.8v2.8h2.8v2.8h2.8V11.7h5.7v39.6Zm17-9.9h1.4v2.8h2.8v1.4h12.7v-5.7h-5.7v-5.7h11.3v17h-22.7v-2.8h-2.8v-2.8h-2.8v-28.3h2.8v-2.8h2.8v-2.8h17v2.8h2.8v2.8h2.8v5.7h-5.7v-2.8h-2.8v-2.8h-11.3v2.8h-2.8v21.2Z" fill="#555" stroke-width="0">
+        <animate attributeName="opacity"
+             values="0;1;0" dur="1s"
+             repeatCount="indefinite"/>
+    </path>
+</svg>

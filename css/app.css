@@ -361,16 +361,11 @@ h1, h2, h3 {
     font-size: 4.8rem;
   }
 }
-.headline, .cta, .work, .theme__mode-toggle {
+.headline, .work {
   opacity: 0;
   transform: translateY(10rem);
   will-change: transform;
   transition: transform 1.2s var(--ease-out), opacity 1.2s var(--ease-out);
-}
-
-.theme__mode-toggle {
-  opacity: 0;
-  transition: opacity 1.2s var(--ease-out);
 }
 
 .loader {
@@ -383,7 +378,7 @@ h1, h2, h3 {
   left: 0;
   bottom: 0;
   right: 0;
-  background: var(--clr-light);
+  background: var(--clr-bg);
 }
 .loader.load .loader-wrap {
   opacity: 1;
@@ -393,87 +388,15 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 8rem;
-  height: 8rem;
   opacity: 0;
   transition: opacity 1.2s 2s var(--ease-out);
 }
-.loader .loader-wrap .spinner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
-svg.eyeball {
-  width: 2rem;
-  margin-top: -0.1rem;
-  transition: all 0.6s var(--ease-out);
-}
-svg.eyeball path {
-  transform-origin: 50% 50%;
-  animation: blink 3s infinite;
-  overflow: hidden;
-}
-svg.eyeball circle {
-  animation: look 10s infinite;
-}
-
-@keyframes blink {
-  0% {
-    transform: scaleY(1);
-  }
-  2% {
-    transform: scaleY(0.1);
-  }
-  6% {
-    transform: scaleY(1);
-  }
-  94% {
-    transform: scaleY(1);
-  }
-  95% {
-    transform: scaleY(1);
-  }
-  0% {
-    transform: scaleY(0.1);
-  }
-}
-@keyframes look {
-  0% {
-    transform: translateX(0);
-  }
-  5% {
-    transform: translateX(0);
-  }
-  15% {
-    transform: translateX(3px);
-  }
-  20% {
-    transform: translateX(0);
-  }
-  30% {
-    transform: translateX(-3px);
-  }
-  60% {
-    transform: translateX(0);
-  }
-  70% {
-    transform: translateX(0);
-  }
-  80% {
-    transform: translateX(-3px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 svg.heart {
   width: 3rem;
   height: 3rem;
   transition: all 0.6s var(--ease-in-out-quad);
-  animation: spinHeart 3s infinite;
+  animation: beatHeart 3s infinite;
 }
 @media (min-width: 1280px) {
   svg.heart {
@@ -482,7 +405,7 @@ svg.heart {
   }
 }
 
-@keyframes spinHeart {
+@keyframes beatHeart {
   0% {
     transform: scale(1);
   }
