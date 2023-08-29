@@ -4,9 +4,10 @@
     --clr-secondary:#555;
     --clr-highlight:#aefe25;
     --clr-border:#d7d7d7;
+    --clr-bg:#aaaaaa;
 }
 body{
-    background:var(--clr-secondary) url("../img/bg-pattern.png") repeat fixed;
+    background-color:var(--clr-bg);
     color:var(--clr-light);
     ::-moz-selection { /* Code for Firefox */
         background: #aefe25;

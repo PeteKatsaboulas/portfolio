@@ -104,10 +104,11 @@ meter {
   --clr-secondary:#555;
   --clr-highlight:#aefe25;
   --clr-border:#d7d7d7;
+  --clr-bg:#aaaaaa;
 }
 
 body {
-  background: var(--clr-secondary) url("../img/bg-pattern.png") repeat fixed;
+  background-color: var(--clr-bg);
   color: var(--clr-light);
 }
 body ::-moz-selection {
@@ -131,7 +132,7 @@ header {
   justify-content: center;
   top: 0;
   height: 5rem;
-  background: var(--clr-secondary) url("../img/bg-pattern.png") repeat fixed;
+  background-color: var(--clr-bg);
   border-bottom: var(--border-width) solid var(--clr-border);
   overflow: hidden;
 }
@@ -231,7 +232,7 @@ header.active .logo-top {
   display: flex;
   width: 100%;
   height: 10rem;
-  background: var(--clr-secondary) url("../img/bg-pattern.png") repeat fixed;
+  background-color: var(--clr-bg);
   border-top: var(--border-width) solid var(--clr-border);
   border-bottom: var(--border-width) solid var(--clr-border);
 }
@@ -520,8 +521,8 @@ svg.heart {
   position: relative;
 }
 .hero .headline {
-  padding-top: max(12vw, 16rem);
-  padding-bottom: 10rem;
+  padding-top: max(10vw, 12rem);
+  padding-bottom: max(6vw, 6rem);
   padding-left: 1rem;
 }
 @media (min-width: 960px) {

@@ -1,8 +1,8 @@
 .hero{
     position:relative;
     .headline{
-        padding-top:max(12vw, 16rem);
-        padding-bottom:10rem;
+        padding-top:max(10vw, 12rem);
+        padding-bottom:max(6vw, 6rem);
         padding-left:1rem;
         @media(min-width:960px) { 
            padding-left:3rem;

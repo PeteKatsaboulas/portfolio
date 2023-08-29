@@ -6,7 +6,7 @@ header{
    justify-content: center;
    top:0;
    height:5rem;
-   background:var(--clr-secondary) url("../img/bg-pattern.png") repeat fixed;
+   background-color:var(--clr-bg);
    border-bottom:var(--border-width) solid var(--clr-border);
    overflow:hidden;
    .logo, .logo-top{
@@ -109,7 +109,7 @@ header{
    display:flex;
    width:100%;
    height:10rem;
-   background:var(--clr-secondary) url("../img/bg-pattern.png") repeat fixed;
+   background-color:var(--clr-bg);
    border-top:var(--border-width) solid var(--clr-border);
    border-bottom:var(--border-width) solid var(--clr-border);
    &:after{
