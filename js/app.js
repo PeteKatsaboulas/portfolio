@@ -53,9 +53,10 @@ projects.forEach( (project) => {
     thumbs[0].classList.add("active")
 
     thumbs.forEach( (thumb) => {
-        let src = thumb.innerHTML
         thumb.onmousedown= (e) => {
-           featureImg.innerHTML = src
+           clone = thumb.cloneNode(true)
+           featureImg.innerHTML = clone.innerHTML
+
            gsap.fromTo(featureImg, {scale:1.1}, {scale:1.01, duration: 0.6, ease: "power3.out"})
 
            thumbs.forEach( (thumb) => {
