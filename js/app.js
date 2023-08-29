@@ -1,9 +1,8 @@
-// Register 
-gsap.registerPlugin(Draggable)
-gsap.registerPlugin(ScrollTrigger)
-
-// Window load
+// ———————————————————————————————————————————————————————————————
+// Loading stuff
+// ———————————————————————————————————————————————————————————————
 let loader = document.querySelector(".loader")
+
 loader.classList.add("load");
 
 window.onload = () => {
@@ -12,7 +11,9 @@ window.onload = () => {
   requestAnimationFrame(raf);
 }
 
-// Lenis smooth scroll
+// ———————————————————————————————————————————————————————————————
+// Scrolling stuff
+// ———————————————————————————————————————————————————————————————
 const lenis = new Lenis()
 
 function raf(time) {
@@ -21,27 +22,41 @@ function raf(time) {
 }
 
 lenis.on("scroll", function(){
+  const header = document.querySelector("header")
+      
   document.querySelector(".hero").style.transform = "translateY(" + window.scrollY*0.035 + "%)";
 
-  console.log(window.scrollY)
-
+  if(window.scrollY > window.innerHeight){
+    header.classList.add("active")
+  } else{
+    header.classList.remove("active")
+  }
 })
 
+const logoTop = document.querySelector(".logo-top")
+
+logoTop.onclick = () => {
+  window.scrollTo({top:0, behavior: "smooth"})
+}
+
+// ———————————————————————————————————————————————————————————————
+// Project stuff
+// ———————————————————————————————————————————————————————————————
 let projects = document.querySelectorAll(".project")
 
 projects.forEach( (project) => {
     let thumbs  = project.querySelectorAll(".thumb"),
-        target  = project.querySelector(".slide__active-inner"),
+        featureImg  = project.querySelector(".slide__active-inner"),
         infoBtn = project.querySelector(".project__info-btn")
-        
-    target.innerHTML = thumbs[0].innerHTML
+    // Project gallery 
+    featureImg.innerHTML = thumbs[0].innerHTML
     thumbs[0].classList.add("active")
 
     thumbs.forEach( (thumb) => {
         let src = thumb.innerHTML
         thumb.onmousedown= (e) => {
-           target.innerHTML = src
-           gsap.fromTo(target, {scale:1.1}, {scale:1.01, duration: 0.6, ease: "power3.out"})
+           featureImg.innerHTML = src
+           gsap.fromTo(featureImg, {scale:1.1}, {scale:1.01, duration: 0.6, ease: "power3.out"})
 
            thumbs.forEach( (thumb) => {
             thumb.classList.remove("active")
@@ -49,6 +64,7 @@ projects.forEach( (project) => {
            thumb.classList.add("active")
         }
     })
+    // Project info reveal
     infoBtn.onmousedown = () => {
         project.classList.toggle("info")
         if(project.classList.contains("info")){
@@ -59,24 +75,6 @@ projects.forEach( (project) => {
     }
 })
 
-// Hero parallax
-
-
-// Toogle dark mode
-let toggleTheme    = document.querySelector(".theme__mode-toggle")
-let toggleThemeBtn = document.querySelector(".toggle-btn")
-
-toggleTheme.onclick = () => {
-  let theme = document.body.getAttribute("data-theme")
-
-  if(theme == "light") {
-    document.body.setAttribute("data-theme", "dark");
-  } else {
-    document.body.setAttribute("data-theme", "light");
-  }
-  toggleTheme.classList.toggle("active");
-  document.querySelector("header").classList.toggle("dark");
-}
 
 
 

@@ -3,35 +3,9 @@
     .headline{
         padding-top:max(12vw, 16rem);
         padding-bottom:10rem;
-        padding-inline:0;
-    }
-}
-
-@media(min-width:960px) {
-    .hero{
-        .headline{
-            padding-left:3rem;
-        }
-        .cta{
-            right:auto;
-            left:50%;
-            &:after{
-                content:"Drag left...enjoy";
-            }
-        }
-    }
-}
-@media(min-width:1280px) {
-    .hero{
-        .headline{
-            padding-left:4rem;
-        }
-    }
-}
-@media(min-width:1600px) {
-    .hero{
-        .headline{
-            padding-left:3rem;
+        padding-left:1rem;
+        @media(min-width:960px) { 
+           padding-left:3rem;
         }
     }
 }

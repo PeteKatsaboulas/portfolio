@@ -1,65 +1,24 @@
-[data-theme="light"]{
-    --clr-dark:#181818;
-    --clr-light:#f6f6f6; 
-    --clr-secondary:#888;
-    --clr-highlight:#19e9bf;
-    --clr-border:#111;
+:root{
+    --clr-dark:#222;
+    --clr-light:#fff; 
+    --clr-secondary:#555;
+    --clr-highlight:#aefe25;
+    --clr-border:#d7d7d7;
 }
-[data-theme="dark"]{
-    --clr-dark:#f6f6f6;
-    --clr-light:#181818; 
-    --clr-secondary:#888;
-    --clr-highlight:#26f8ce;
-    --clr-border:#727272;
-}
-body, .work, .project__square{
-    background-color:var(--clr-light);
-    color:var(--clr-dark);
-    transition:background-color 0.4s var(--ease-out), color 0.4s var(--ease-out);
+body{
+    background:var(--clr-secondary) url("../img/bg-pattern.png") repeat fixed;
+    color:var(--clr-light);
+    ::-moz-selection { /* Code for Firefox */
+        background: #aefe25;
+      }
+      
+      ::selection {
+        color:var(--clr-secondary);
+        background: #aefe25;
+      }
 }
 
 .clr--secondary{
     color:var(--clr-secondary)
 }
 
-.theme__mode-toggle{
-    display:flex;
-    align-items: center;
-    gap:0.5rem;
-    .toggle-container{
-        position:relative;
-        width:2.6rem;
-        height:1.6rem;
-        background-color:var(--clr-dark);
-        border-radius:2rem;
-        cursor:pointer;
-    }
-    .toggle-icon{
-        width:1.6rem;
-        height:1.6rem;
-    }
-    .toggle-icon__dark{
-        display:none;
-    }
-    .toggle-btn{
-        position:absolute;
-        top:0.2rem;
-        left:0.2rem;
-        width:1.2rem;
-        height:1.2rem;
-        background-color:var(--clr-light);
-        border-radius:2rem;
-        transition:transform 0.6s var(--ease-out);
-    }
-    &.active{
-        .toggle-btn{
-           transform:translateX(1rem);
-        }
-        .toggle-icon__light{
-            display:none;
-        }
-        .toggle-icon__dark{
-            display:block;
-        }
-    }
-}
