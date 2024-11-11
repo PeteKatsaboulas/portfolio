@@ -55,7 +55,7 @@ meter {
   display: none;
 }
 
-:where([contenteditable]:not([contenteditable="false"])) {
+:where([contenteditable]:not([contenteditable=false])) {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   overflow-wrap: break-word;
@@ -63,7 +63,7 @@ meter {
   -webkit-user-select: auto;
 }
 
-:where([draggable="true"]) {
+:where([draggable=true]) {
   -webkit-user-drag: element;
 }
 
@@ -99,12 +99,12 @@ meter {
 }
 
 :root {
-  --clr-dark:#222;
-  --clr-light:#fff;
-  --clr-secondary:#555;
-  --clr-highlight:#aefe25;
-  --clr-border:#d7d7d7;
-  --clr-bg:#aaaaaa;
+  --clr-dark: #222;
+  --clr-light: #fff;
+  --clr-secondary: #757575;
+  --clr-highlight: #ed5610;
+  --clr-border: #3b3b3b;
+  --clr-bg: #151515;
 }
 
 body {
@@ -113,11 +113,13 @@ body {
 }
 body ::-moz-selection {
   /* Code for Firefox */
-  background: #aefe25;
+  background: #ed5610;
+  color: white;
 }
 body ::selection {
   color: var(--clr-secondary);
-  background: #aefe25;
+  background: #ed5610;
+  color: white;
 }
 
 .clr--secondary {
@@ -277,7 +279,7 @@ header.active .logo-top {
 }
 
 @font-face {
-  font-family: 'pixel';
+  font-family: "pixel";
   src: url("../fonts/modeseven-webfont.woff2") format("woff2"), url("../fonts/modeseven-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -287,7 +289,7 @@ html {
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1.4rem;
   letter-spacing: -0.01em;
   line-height: 1.4;
@@ -313,7 +315,7 @@ h1, h2, h3 {
 }
 
 .ff--mono {
-  font-family: 'pixel';
+  font-family: "pixel";
   font-size: 1rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -335,15 +337,12 @@ h1, h2, h3 {
   body {
     font-size: 1.5rem;
   }
-
   .fs--1 {
     font-size: 4rem;
   }
-
   .fs--2 {
     font-size: 2.8rem;
   }
-
   .fs--3 {
     font-size: 4rem;
   }
@@ -352,11 +351,9 @@ h1, h2, h3 {
   .fs--1 {
     font-size: 5rem;
   }
-
   .fs--2 {
     font-size: 3.6rem;
   }
-
   .fs--3 {
     font-size: 4.8rem;
   }
@@ -490,7 +487,7 @@ svg.heart {
   }
 }
 .work__grid .align--right {
-  grid-column: 2 / 3;
+  grid-column: 2/3;
 }
 
 .project {
@@ -576,6 +573,9 @@ svg.heart {
   background: var(--clr-secondary);
   color: var(--clr-light);
 }
+.project__info .project__link:hover {
+  background: var(--clr-highlight);
+}
 
 .project__slider {
   position: relative;
@@ -583,7 +583,8 @@ svg.heart {
   will-change: transform;
   transition: all 0.8s var(--ease-out);
 }
-.project__slider img, .project__slider video {
+.project__slider img,
+.project__slider video {
   display: block;
 }
 
@@ -593,10 +594,11 @@ svg.heart {
 }
 .slide__active .slide__active-inner {
   width: 100%;
-  aspect-ratio: 1 / 0.9;
+  aspect-ratio: 1/0.9;
   transform: scale(1.01);
 }
-.slide__active img, .slide__active video {
+.slide__active img,
+.slide__active video {
   display: block;
   width: 100%;
   height: 100%;
@@ -610,11 +612,12 @@ svg.heart {
 }
 .slide__thumbs .thumb {
   position: relative;
-  flex-basis: calc(100% / 8);
+  flex-basis: 12.5%;
   padding-right: 0.3rem;
   cursor: pointer;
 }
-.slide__thumbs .thumb img, .slide__thumbs .thumb video {
+.slide__thumbs .thumb img,
+.slide__thumbs .thumb video {
   display: block;
   width: 100%;
   height: auto;
